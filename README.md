@@ -55,7 +55,7 @@ All frontend actions are processed through Spring Boot REST APIs and changes are
 
 ## 📂 Project Structure
 
-
+```
 Todo-CRUD-Application
 
 │
@@ -78,6 +78,7 @@ Todo-CRUD-Application
 ├── postman                      # API Collection
 │
 └── README.md
+```
 
 ---
 
@@ -87,9 +88,9 @@ Todo-CRUD-Application
 
 Open MySQL Workbench:
 
-sql
+```sql
 CREATE DATABASE todo;
-
+```
 
 ---
 
@@ -97,13 +98,13 @@ CREATE DATABASE todo;
 
 Path:
 
-
+```
 demo/src/main/resources/application.properties
-
+```
 
 Configuration:
 
-properties
+```properties
 server.port=8087
 
 spring.datasource.url=jdbc:mysql://localhost:3306/todo?allowPublicKeyRetrieval=true&useSSL=false
@@ -115,7 +116,7 @@ spring.datasource.password=your_mysql_password
 spring.jpa.hibernate.ddl-auto=update
 
 spring.jpa.show-sql=true
-
+```
 
 ---
 
@@ -123,12 +124,15 @@ spring.jpa.show-sql=true
 
 Run:
 
+```
 TodoApplication.java
-
+```
 
 Backend starts on:
 
+```
 http://localhost:8087
+```
 
 ---
 
@@ -136,12 +140,13 @@ http://localhost:8087
 
 ## Get All Todos
 
-
+```
 GET /api/todos
+```
 
 Example Response:
 
-json
+```json
 [
  {
   "id":1,
@@ -150,47 +155,51 @@ json
   "completed":true
  }
 ]
-
+```
 
 ---
 
 ## Create Todo
 
-
+```
 POST /api/todos
+```
 
 Request:
 
-json
+```json
 {
 "title":"Learn Streamlit",
 "description":"Connect frontend with backend",
 "completed":false
 }
-
+```
 
 ---
 
 ## Update Todo
 
-
+```
 PUT /api/todos/{id}
+```
 
 Request:
 
-json
+```json
 {
 "title":"Updated Task",
 "description":"Task updated successfully",
 "completed":true
 }
-
+```
 
 ---
 
 ## Delete Todo
 
+```
 DELETE /api/todos/{id}
+```
 
 ---
 
@@ -198,26 +207,33 @@ DELETE /api/todos/{id}
 
 Move to frontend folder:
 
+```
 cd todo-frontend
-
+```
 
 Install dependencies:
 
+```
 pip install -r requirements.txt
+```
 
 Run Streamlit:
 
+```
 streamlit run app.py
+```
 
 Frontend opens at:
 
+```
 http://localhost:8501
+```
 
 ---
 
 # Application Workflow
 
-
+```
 User
  |
  |
@@ -234,6 +250,7 @@ MySQL Database
 
 
 Postman → API Testing
+```
 
 ---
 
@@ -241,47 +258,49 @@ Postman → API Testing
 
 ### CREATE
 
-
+```
 Streamlit Form
       ↓
 POST API
       ↓
 MySQL Insert
+```
 
 ---
 
 ### READ
 
-
+```
 GET API
    ↓
 Fetch Data
    ↓
 Display Dashboard
+```
 
 ---
 
 ### UPDATE
 
-
+```
 Update Button
       ↓
 PUT API
       ↓
 Database Updated
-
+```
 
 ---
 
 ### DELETE
 
-
+```
 Delete Button
       ↓
 DELETE API
       ↓
 Record Removed
-
+```
 
 ---
 
@@ -327,12 +346,7 @@ Passionate about learning and building real-world applications 🚀
 
 Skills:
 
-Java
-Spring Boot
-MySQL 
-Python
-Streamlit
-REST API
+`Java` `Spring Boot` `MySQL` `Python` `Streamlit` `REST API`
 
 ---
 
